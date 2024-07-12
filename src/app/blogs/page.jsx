@@ -10,12 +10,15 @@ const page = () => {
             <div className="container">
                 <div className='grid grid-cols-3 gap-8'>
                     {
-                        posts.map((post) => 
-                        <div key={post.slug} className='border px-5 py-5 rounded-xl space-y-3'>
-                            <h2 className='text-xl'>{post.title}</h2>
-                            <p>{post.description}</p>
-                            <Link href={`/blogs/${post.slug}`} className='btn btn-primary'>Read More</Link>
-                        </div>
+                        posts.map((post) =>
+                            <div key={post.slug} className='border px-5 py-5 rounded-xl space-y-3'>
+                                <div className='rounded-xl bg-slate-600 h-[220px] flex items-center text-center justify-center'>
+                                    <p className='text-center text-white'>IMAGE</p>
+                                    </div>
+                                <h2 className='text-xl'>{post.title}</h2>
+                                <p>{post.description}</p>
+                                <Link href={`/blogs/${post.slug}`} className='btn btn-primary'>Read More</Link>
+                            </div>
                         )
                     }
                 </div>
